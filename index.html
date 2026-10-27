@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f1f5f9">
+    <meta name="description" content="Recruitment management and HR analytics portal">
+    <title>Recruitment &amp; HR Analytics</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard" aria-label="HR Portal dashboard">
+          <span class="brand-mark" aria-hidden="true">H</span>
+          <span><strong>HR PORTAL</strong><small>Recruitment Management</small></span>
+        </a>
+        <nav class="navigation" aria-label="Main navigation">
+          <button class="nav-link active" type="button" data-page="Dashboard"><span aria-hidden="true">▦</span> Dashboard</button>
+          <button class="nav-link" type="button" data-page="Candidates"><span aria-hidden="true">♙</span> Candidates</button>
+          <button class="nav-link" type="button" data-page="Interviews"><span aria-hidden="true">◷</span> Interviews</button>
+          <button class="nav-link" type="button" data-page="Employees"><span aria-hidden="true">♧</span> Employees</button>
+          <button class="nav-link" type="button" data-page="Analytics"><span aria-hidden="true">▤</span> Analytics</button>
+        </nav>
+        <div class="sidebar-note"><span class="online-dot"></span> Your workspace is stored in this browser</div>
+      </aside>
+
+      <main class="main" id="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">PEOPLE OPERATIONS</p>
+            <h1 id="page-title">HR Dashboard</h1>
+          </div>
+          <div class="topbar-meta"><span class="phase-badge">RECRUITMENT &amp; HR</span><time id="clock"></time></div>
+        </header>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <section id="page-content" class="page-content" aria-live="polite"></section>
+        <footer class="footer"><span>Recruitment &amp; HR Analytics</span><span>Private to this browser · GitHub Pages</span></footer>
+      </main>
+    </div>
+    <dialog id="form-dialog" class="form-dialog">
+      <form id="data-form" method="dialog">
+        <div class="dialog-heading">
+          <div><p class="eyebrow">WORKSPACE</p><h2 id="dialog-title"></h2></div>
+          <button class="icon-button" type="button" data-close-dialog aria-label="Close dialog">×</button>
+        </div>
+        <div id="dialog-fields" class="dialog-fields"></div>
+        <div class="dialog-actions">
+          <button class="button button-muted" type="button" data-close-dialog>Cancel</button>
+          <button class="button button-primary" type="submit">Save changes</button>
+        </div>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
